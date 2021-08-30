@@ -1,0 +1,19 @@
+name: Dummy Migrate
+description: Examples for Migrate API
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 1.x
+
+dependencies:
+ - migrate
+ - migrate_plus
+ - migrate_tools
+ - config_devel
+
+config_devel:
+  install:
+    - migrate_plus.migration_group.dummy_migrate
+    - migrate_plus.migration.dummy_migrate_users
+    - migrate_plus.migration.dummy_migrate_article_files
+    - migrate_plus.migration.dummy_migrate_articles
