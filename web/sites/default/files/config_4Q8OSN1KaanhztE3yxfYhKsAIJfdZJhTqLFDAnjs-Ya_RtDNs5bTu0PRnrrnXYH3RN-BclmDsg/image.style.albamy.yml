@@ -1,0 +1,20 @@
+uuid: 65905454-ce81-43b3-ba6c-74edfb6f0216
+langcode: ru
+status: true
+dependencies: {  }
+name: albamy
+label: Альбомы
+effects:
+  a9c6fc42-0153-46d3-8ea2-679a3a08de73:
+    uuid: a9c6fc42-0153-46d3-8ea2-679a3a08de73
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      anchor: center-center
+  1d7b53cc-de8b-4903-a77d-6aad12c7cff1:
+    uuid: 1d7b53cc-de8b-4903-a77d-6aad12c7cff1
+    id: image_desaturate
+    weight: 2
+    data: {  }

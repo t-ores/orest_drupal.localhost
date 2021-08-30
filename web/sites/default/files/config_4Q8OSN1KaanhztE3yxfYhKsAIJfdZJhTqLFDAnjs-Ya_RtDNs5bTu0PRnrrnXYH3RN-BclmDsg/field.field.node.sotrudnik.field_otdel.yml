@@ -1,0 +1,29 @@
+uuid: 4dc0c289-e388-47fb-b938-dbb8e859fe18
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_otdel
+    - node.type.sotrudnik
+    - taxonomy.vocabulary.otdely
+id: node.sotrudnik.field_otdel
+field_name: field_otdel
+entity_type: node
+bundle: sotrudnik
+label: Отдел
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      otdely: otdely
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

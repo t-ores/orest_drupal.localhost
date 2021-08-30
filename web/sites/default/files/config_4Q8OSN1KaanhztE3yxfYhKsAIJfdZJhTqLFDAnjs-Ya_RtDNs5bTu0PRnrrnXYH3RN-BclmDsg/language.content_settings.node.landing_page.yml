@@ -1,0 +1,11 @@
+uuid: 4a217f89-5f04-43a0-a69d-82d36e600c92
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page
+target_entity_type_id: node
+target_bundle: landing_page
+default_langcode: site_default
+language_alterable: false

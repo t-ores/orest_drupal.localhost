@@ -1,0 +1,11 @@
+uuid: efd300c3-c15f-4250-bff7-3a5f12e37036
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: tZHMPSDA5PkRP7XIrFWaxJwM2W9wkp5cLlcy9WYpS2s
+id: de
+label: German
+direction: ltr
+weight: 1
+locked: false

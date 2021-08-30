@@ -1,0 +1,15 @@
+uuid: 4ae54f48-0760-4e20-a88a-0adefc986a6f
+langcode: ru
+status: true
+dependencies: {  }
+name: miniatyura_novosti
+label: 'Миниатюра новости'
+effects:
+  fa7280d4-2790-4d4a-af12-aef702132f6b:
+    uuid: fa7280d4-2790-4d4a-af12-aef702132f6b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      anchor: center-center

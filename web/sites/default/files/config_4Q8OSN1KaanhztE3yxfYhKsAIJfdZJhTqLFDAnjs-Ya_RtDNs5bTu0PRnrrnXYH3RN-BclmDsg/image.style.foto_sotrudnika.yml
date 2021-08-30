@@ -1,0 +1,15 @@
+uuid: c0e12d26-59c7-4405-8cf1-9a7f08f3d2eb
+langcode: ru
+status: true
+dependencies: {  }
+name: foto_sotrudnika
+label: 'Фото сотрудника большое'
+effects:
+  67f8e6cd-b482-409b-aa05-71e5612ebb93:
+    uuid: 67f8e6cd-b482-409b-aa05-71e5612ebb93
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      upscale: false

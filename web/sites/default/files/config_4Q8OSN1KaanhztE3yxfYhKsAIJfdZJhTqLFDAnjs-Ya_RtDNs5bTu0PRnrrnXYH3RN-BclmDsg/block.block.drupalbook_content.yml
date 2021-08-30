@@ -1,0 +1,22 @@
+uuid: ff7b2a59-8d20-44d5-a904-abcab210dd31
+langcode: ru
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - drupalbook
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: drupalbook_content
+theme: drupalbook
+region: content
+weight: -14
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

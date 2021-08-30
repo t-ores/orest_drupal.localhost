@@ -1,0 +1,21 @@
+uuid: fb227d28-83ed-49bb-80b2-f355c164d417
+langcode: ru
+status: false
+dependencies:
+  module:
+    - cstm_block_plugin
+  theme:
+    - drupalbook
+id: myfirstblock
+theme: drupalbook
+region: sidebar_second
+weight: 0
+provider: null
+plugin: drupalbook_first_block_block
+settings:
+  id: drupalbook_first_block_block
+  label: 'My first block'
+  provider: cstm_block_plugin
+  label_display: visible
+  drupalbook_first_block_settings: ''
+visibility: {  }

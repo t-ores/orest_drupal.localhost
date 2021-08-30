@@ -1,0 +1,39 @@
+drupalbook.first_page:
+  path: '/first-page'
+  defaults:
+    _controller: '\Drupal\cstm_block_plugin\Controller\FirstPageController::content'
+    _title: 'Hello World!'
+  requirements:
+    _permission: 'access content'
+drupalbook.private_content:
+  path: '/private-page'
+  defaults:
+    _controller: '\Drupal\cstm_block_plugin\Controller\FirstPageController::privateContent'
+    _title: 'Private content'
+  requirements:
+    _permission: 'access premium pages'
+drupalbook.display_node:
+  path: '/display-node/{node}'
+  defaults:
+    _controller: '\Drupal\cstm_block_plugin\Controller\DisplayNode::content'
+    _title_callback: '\Drupal\cstm_block_plugin\Controller\DisplayNode::getTitle'
+  requirements:
+    _custom_access: '\Drupal\cstm_block_plugin\Controller\DisplayNode::access'
+  options:
+    parameters:
+      node:
+        type: entity:node
+drupalbook.settings:
+  path: '/admin/structure/cstm_block_plugin/settings'
+  defaults:
+    _form: '\Drupal\cstm_block_plugin\Form\DrupalbookSettingsForm'
+    _title: 'DrupalBook Settings form'
+  requirements:
+    _permission: 'administer site configuration'
+drupalbook.multistep_form:
+  path: '/multistep-form'
+  defaults:
+    _form: '\Drupal\cstm_block_plugin\Form\MultiStepForm'
+    _title: 'Subscribe to newsletter'
+  requirements:
+    _permission: 'access content'

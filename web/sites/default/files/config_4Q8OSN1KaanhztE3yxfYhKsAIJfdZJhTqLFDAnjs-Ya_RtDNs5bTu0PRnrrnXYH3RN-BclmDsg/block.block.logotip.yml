@@ -1,0 +1,25 @@
+uuid: 7459137f-328c-4be2-a6f5-63637a22a6fa
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b41ed0f6-f625-4fa4-8140-5238a63fa646'
+  module:
+    - block_content
+  theme:
+    - drupalbook
+id: logotip
+theme: drupalbook
+region: navigation
+weight: 0
+provider: null
+plugin: 'block_content:b41ed0f6-f625-4fa4-8140-5238a63fa646'
+settings:
+  id: 'block_content:b41ed0f6-f625-4fa4-8140-5238a63fa646'
+  label: Логотип
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 204e910c-f2a2-4041-9314-4c98919e44bf
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal8_w3css_theme
+_core:
+  default_config_hash: bSh87nayw-Fh7x0auxPJoNHFokn1zFwX9KSyLpcH0Bg
+id: drupal8_w3css_theme_content
+theme: drupal8_w3css_theme
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,6 @@
+name: Custom Block Plugin
+description: 'Custom module for learning Drupal 8'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: t-ores

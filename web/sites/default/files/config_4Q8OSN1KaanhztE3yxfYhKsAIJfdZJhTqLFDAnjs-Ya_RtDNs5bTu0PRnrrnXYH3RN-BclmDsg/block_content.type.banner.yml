@@ -1,0 +1,8 @@
+uuid: c75924c1-ea4b-4cd9-8581-bc9586ead865
+langcode: ru
+status: true
+dependencies: {  }
+id: banner
+label: Баннер
+revision: 0
+description: 'Блок для отображения изображений'

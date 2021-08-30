@@ -1,0 +1,20 @@
+uuid: 44d267cc-85d1-4a29-adeb-64119381c10e
+langcode: en
+status: true
+dependencies:
+  module:
+    - dummy
+  theme:
+    - drupalbook
+id: lazyblock
+theme: drupalbook
+region: sidebar_second
+weight: 0
+provider: null
+plugin: dummy_lazy_block
+settings:
+  id: dummy_lazy_block
+  label: 'Lazy block'
+  provider: dummy
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,12 @@
+uuid: a0574eaf-49c8-4248-acc5-9d31dfce8050
+langcode: ru
+status: true
+dependencies: {  }
+id: test
+label: test
+description: ''
+use_admin_theme: false
+path: /test1
+access_logic: and
+access_conditions: {  }
+parameters: {  }

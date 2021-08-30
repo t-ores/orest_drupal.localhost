@@ -1,0 +1,21 @@
+uuid: 56d84973-ca97-4e2b-bf6f-4fef46005922
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tip_obyavleniya
+    - node.type.ads
+  module:
+    - options
+id: node.ads.field_tip_obyavleniya
+field_name: field_tip_obyavleniya
+entity_type: node
+bundle: ads
+label: 'Тип обьявления'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

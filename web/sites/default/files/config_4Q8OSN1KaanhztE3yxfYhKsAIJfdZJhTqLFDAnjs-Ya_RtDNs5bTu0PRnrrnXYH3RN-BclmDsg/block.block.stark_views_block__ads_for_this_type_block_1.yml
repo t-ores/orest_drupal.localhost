@@ -1,0 +1,30 @@
+uuid: 5e0bbd71-8c82-42e7-9816-7f1e35a0efa0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.ads_for_this_type
+  module:
+    - system
+    - views
+  theme:
+    - stark
+id: stark_views_block__ads_for_this_type_block_1
+theme: stark
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:ads_for_this_type-block_1'
+settings:
+  id: 'views_block:ads_for_this_type-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/taxonomy/term/*'
+    negate: false

@@ -1,0 +1,70 @@
+uuid: 54099681-4cb8-449b-bbe1-8c59b7602689
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.sotrudnik.body
+    - field.field.node.sotrudnik.field_data_rozhdeniya
+    - field.field.node.sotrudnik.field_dolzhnost
+    - field.field.node.sotrudnik.field_foto_sotrudnika
+    - field.field.node.sotrudnik.field_otdel
+    - image.style.foto_sotrudnika
+    - node.type.sotrudnik
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.sotrudnik.default
+targetEntityType: node
+bundle: sotrudnik
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_data_rozhdeniya:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_dolzhnost:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_foto_sotrudnika:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: foto_sotrudnika
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_otdel:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

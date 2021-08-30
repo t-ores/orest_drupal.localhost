@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implements hook_form_alter().
+ */
+function cstm_block_plugin_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'cstm_block_plugin_admin_settings') {
+    $form['cstm_block_plugin_api_key']['#attributes']['placeholder'] = 'API key';
+    $form['cstm_block_plugin_api_client_id']['#attributes']['placeholder'] = 'API client ID';
+
+    $form['#validate'][] = 'cstm_block_plugin_settings_validate';
+    $form['#submit'][] = 'cstm_block_plugin_settings_submit';
+  }
+}
+
+/**
+ * Custom validation callback.
+ */
+function cstm_block_plugin_settings_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  if (strpos($form_state->getValue('cstm_block_plugin_api_key'), 'google') === FALSE) {
+    $form_state->setErrorByName('cstm_block_plugin_api_key', t('API Key must start from "google".'));
+  }
+}
+
+/**
+ * Custom submit callback.
+ */
+function cstm_block_plugin_settings_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // drupal_set_message is deprecated
+  // drupal_set_message(t('An error occurred and processing did not complete.'));
+
+  \Drupal::messenger()->addStatus(
+    t(htmlentities('Insert API key in your <head> tag:  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" type="text/javascript"></script>.'))
+  );
+}

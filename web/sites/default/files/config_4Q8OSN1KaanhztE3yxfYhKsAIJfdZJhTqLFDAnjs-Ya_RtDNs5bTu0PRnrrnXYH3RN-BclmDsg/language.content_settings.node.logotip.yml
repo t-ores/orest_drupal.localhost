@@ -1,0 +1,11 @@
+uuid: 4d76800a-73a6-4635-9e01-0d719fb2075b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.logotip
+id: node.logotip
+target_entity_type_id: node
+target_bundle: logotip
+default_langcode: site_default
+language_alterable: false

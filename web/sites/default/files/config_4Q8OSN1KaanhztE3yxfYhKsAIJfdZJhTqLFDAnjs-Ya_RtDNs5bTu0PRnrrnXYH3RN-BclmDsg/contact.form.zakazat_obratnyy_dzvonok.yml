@@ -1,0 +1,12 @@
+uuid: 678f3f02-ad9d-4e4a-9723-77a73b1c6821
+langcode: ru
+status: true
+dependencies: {  }
+id: zakazat_obratnyy_dzvonok
+label: 'Заказать обратный дзвонок'
+recipients:
+  - yakim.oresst@gmail.com
+reply: ''
+weight: 0
+message: 'Ваше сообщение отправлено.'
+redirect: /

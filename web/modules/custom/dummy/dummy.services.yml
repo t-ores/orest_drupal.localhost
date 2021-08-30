@@ -1,0 +1,24 @@
+parameters:
+  dummy.message_types: ['status', 'warning', 'error']
+services:
+  dummy.article_breadcrumb:
+    class: Drupal\dummy\ArticleBreadcrumbBuilder
+    arguments: []
+    tags:
+      - { name: breadcrumb_builder, priority: 10 }
+#  dummy.random_message:
+#    class: Drupal\dummy\RandomMessageGenerator
+#  dummy.random_drupal_message:
+#    class: Drupal\dummy\RandomDrupalMessage
+#    arguments: ['@dummy.random_message', '%dummy.message_types%']
+  dummy.lazy_renderer:
+    class: Drupal\dummy\LazyRenderer
+  cache_context.dummy_request_header:
+    class: Drupal\dummy\Cache\Context\DummyRequestHeaderCacheContext
+    arguments: [ '@request_stack' ]
+    tags:
+      - { name: cache.context }
+  dummy.twig_extensions:
+    class: Drupal\dummy\Twig\Extension\Extensions
+    tags:
+      - { name: twig.extension }

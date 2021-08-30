@@ -1,0 +1,11 @@
+uuid: 3566d715-1efa-4029-a0a7-4842fd007dcb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.kniga
+id: node.kniga
+target_entity_type_id: node
+target_bundle: kniga
+default_langcode: site_default
+language_alterable: false

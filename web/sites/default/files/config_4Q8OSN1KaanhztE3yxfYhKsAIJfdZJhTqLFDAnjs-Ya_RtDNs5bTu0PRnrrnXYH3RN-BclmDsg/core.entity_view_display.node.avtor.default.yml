@@ -1,0 +1,41 @@
+uuid: 81304c0a-6583-4546-85dd-45972dc011a9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.avtor.body
+    - field.field.node.avtor.field_portret_avtora
+    - node.type.avtor
+  module:
+    - image
+    - text
+    - user
+id: node.avtor.default
+targetEntityType: node
+bundle: avtor
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_portret_avtora:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

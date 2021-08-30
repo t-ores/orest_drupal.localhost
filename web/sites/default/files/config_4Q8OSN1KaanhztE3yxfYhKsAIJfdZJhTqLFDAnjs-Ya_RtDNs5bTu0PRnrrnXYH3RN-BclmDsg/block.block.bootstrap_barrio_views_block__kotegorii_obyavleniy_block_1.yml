@@ -1,0 +1,32 @@
+uuid: 5f27cc35-e6a4-4241-bfb2-e2c321aad412
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.kotegorii_obyavleniy
+  module:
+    - ctools
+    - views
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_views_block__kotegorii_obyavleniy_block_1
+theme: bootstrap_barrio
+region: sidebar_first
+weight: -12
+provider: null
+plugin: 'views_block:kotegorii_obyavleniy-block_1'
+settings:
+  id: 'views_block:kotegorii_obyavleniy-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      ads: ads
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

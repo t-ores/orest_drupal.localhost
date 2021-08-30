@@ -1,0 +1,23 @@
+uuid: 73fc32f7-0c9d-432b-99f9-90d3b1ee0dd1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.foto_albom
+  module:
+    - text
+id: node.foto_albom.body
+field_name: body
+entity_type: node
+bundle: foto_albom
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

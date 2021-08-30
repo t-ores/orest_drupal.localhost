@@ -1,0 +1,15 @@
+uuid: 33915f86-409c-48ce-ae6e-8f839a68ac7b
+langcode: ru
+status: true
+dependencies: {  }
+name: foto_sotrudnika_melenkoe
+label: 'Фото сотрудника меленькое'
+effects:
+  afc7fc3a-9bbf-49c3-ac00-eb113a1dd400:
+    uuid: afc7fc3a-9bbf-49c3-ac00-eb113a1dd400
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      upscale: false

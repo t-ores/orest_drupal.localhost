@@ -1,0 +1,30 @@
+uuid: 22647679-2fb7-4f0a-9a40-e11e2f3ec926
+langcode: ru
+status: false
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - stark
+id: stark_language
+theme: stark
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'entity_field:node:langcode'
+settings:
+  id: 'entity_field:node:langcode'
+  label: Language
+  provider: ctools_block
+  label_display: visible
+  formatter:
+    label: hidden
+    type: language
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

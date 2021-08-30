@@ -1,0 +1,6 @@
+services:
+  theme.negotiator.stark_for_front:
+    class: Drupal\helloworld\Theme\StarkForFront
+    arguments: ['@path.matcher']
+    tags:
+      - { name: theme_negotiator, priority: -40 }

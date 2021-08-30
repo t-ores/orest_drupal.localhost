@@ -1,0 +1,11 @@
+uuid: 5af471c4-6760-4409-8cd4-9b8a595bdf15
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.avtor
+id: node.avtor
+target_entity_type_id: node
+target_bundle: avtor
+default_langcode: site_default
+language_alterable: false

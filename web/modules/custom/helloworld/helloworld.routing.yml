@@ -1,0 +1,73 @@
+collect_phone.form:
+  path: '/collect-phone'
+  defaults:
+    _title: 'Collect Phone - Form API example.'
+    # Подгружаем форму по неймспейсу.
+    _form: '\Drupal\helloworld\Form\CollectPhone'
+  requirements:
+    _permission: 'access content'
+
+collect_phone.admin_settings:
+  path: '/admin/config/hello-world/phone-settings'
+  defaults:
+    _form: '\Drupal\helloworld\Form\CollectPhoneSettings'
+    _title: 'Settings for CollectPhone form.'
+  requirements:
+    _permission: 'administer site configuration'
+
+# Первым делом объявляется машинное имя роута. Оно составляетсям из:
+# название_модуля.машинное_название_роута.
+helloworld.hellopage:
+  # Указываем путь роута, с лидирующим слешем.
+  path: 'hello'
+  # Значения по умолчанию
+  defaults:
+    # Функция контроллера отвечающая за содержимое.
+    _controller: '\Drupal\helloworld\Controller\HelloWorldController::helloWorld'
+  # В данном разделе указываются необходимые требования для роута.
+  requirements:
+    # Мы будем показывать страницу только тем, у кого есть права на просмотр
+    # содержимого.
+    _permission: 'view content'
+
+helloworld.menu:
+  path: '/menu'
+  defaults:
+    _controller: '\Drupal\helloworld\Controller\MenuController::MyMenu'
+  requirements:
+    _permission: 'view content'
+
+helloworld.autocomlpete_examples.form:
+  path: '/autocomplete'
+  defaults:
+    _title: 'Autocomplete examples'
+    _form: '\Drupal\helloworld\Form\AutocompleteExamples'
+  requirements:
+    _permission: 'access content'
+
+# Наш кастомный autocomplete.
+helloworld.custom_autocomplete:
+  # Путь по которому будет осуществлятся запрос и получение результата на автодополнение.
+  path: '/helloworld/custom-autocomplete'
+  defaults:
+    # Контроллер и его метод, которые будут выполнять всю логику.
+    _controller: '\Drupal\helloworld\Controller\CustomAutocomplete::autocomplete'
+  requirements:
+    _permission: 'access content'
+
+helloworld.queue_node:
+  path: '/admin/config/people/queue-node'
+  defaults:
+    _title: 'Create nodes by Queue'
+    # Подгружаем форму по неймспейсу.
+    _form: '\Drupal\helloworld\Form\QueueNode'
+  requirements:
+    _permission: 'administer node'
+
+hello_world.admin_config_hello_world:
+  path: '/admin/config/hello-world'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access administration pages'

@@ -1,0 +1,23 @@
+uuid: 8fe4773b-708b-4d5a-90f8-d122207528f8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sotrudnik
+  module:
+    - text
+id: node.sotrudnik.body
+field_name: body
+entity_type: node
+bundle: sotrudnik
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,20 @@
+uuid: 05b5e37b-de94-414b-9064-ee351a16318f
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - drupalbook
+_core:
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: drupalbook_local_actions
+theme: drupalbook
+region: header
+weight: 20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

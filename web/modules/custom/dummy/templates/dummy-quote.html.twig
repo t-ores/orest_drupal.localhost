@@ -1,0 +1,9 @@
+<blockquote{{ attributes.addClass('dummy-quote') }}>
+  <p>{{ quote }}</p>
+
+  {% if footer %}
+    <footer>
+      {{ footer|raw }}
+    </footer>
+  {% endif %}
+</blockquote>

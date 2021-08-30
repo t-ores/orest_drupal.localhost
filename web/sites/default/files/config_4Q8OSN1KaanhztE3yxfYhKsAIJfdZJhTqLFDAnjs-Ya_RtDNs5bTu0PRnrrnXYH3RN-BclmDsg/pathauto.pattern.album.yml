@@ -1,0 +1,22 @@
+uuid: 11e1bdc8-b65d-465e-8b60-443c9575110f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: album
+label: Album
+type: 'canonical_entities:node'
+pattern: 'album/[node:title]'
+selection_criteria:
+  e2fcd8c9-68d5-41c9-b234-09c4a9817930:
+    id: node_type
+    bundles:
+      foto_albom: foto_albom
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e2fcd8c9-68d5-41c9-b234-09c4a9817930
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,30 @@
+uuid: 6f1f5a47-b55a-466d-89d2-6669cdd21514
+langcode: ru
+status: false
+dependencies:
+  config:
+    - views.view.ads_avtor
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap
+id: views_block__ads_avtor_block_1
+theme: bootstrap
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:ads_avtor-block_1'
+settings:
+  id: 'views_block:ads_avtor-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/ads/*'
+    negate: false

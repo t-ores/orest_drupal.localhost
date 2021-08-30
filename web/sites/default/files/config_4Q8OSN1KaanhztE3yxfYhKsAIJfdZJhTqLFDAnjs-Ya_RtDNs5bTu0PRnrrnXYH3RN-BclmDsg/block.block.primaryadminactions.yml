@@ -1,0 +1,18 @@
+uuid: 9474879e-1151-4b7a-9995-c659ad5712c4
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - drupal8_w3css_theme
+id: primaryadminactions
+theme: drupal8_w3css_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

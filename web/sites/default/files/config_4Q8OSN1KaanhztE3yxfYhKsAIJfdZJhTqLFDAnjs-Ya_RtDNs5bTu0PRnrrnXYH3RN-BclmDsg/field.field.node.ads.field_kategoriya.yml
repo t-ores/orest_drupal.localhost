@@ -1,0 +1,29 @@
+uuid: c4c9e05c-76a3-4760-a7bd-fbaa7cebef1f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kategoriya
+    - node.type.ads
+    - taxonomy.vocabulary.ads_category
+id: node.ads.field_kategoriya
+field_name: field_kategoriya
+entity_type: node
+bundle: ads
+label: Категория
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ads_category: ads_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

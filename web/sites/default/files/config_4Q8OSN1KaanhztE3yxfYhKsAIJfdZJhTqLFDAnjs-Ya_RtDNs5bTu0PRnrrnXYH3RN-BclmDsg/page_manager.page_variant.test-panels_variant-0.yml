@@ -1,0 +1,38 @@
+uuid: 01a137cf-228e-4ae4-93a8-3050f9d92a08
+langcode: ru
+status: true
+dependencies:
+  config:
+    - page_manager.page.test
+  module:
+    - panels
+id: test-panels_variant-0
+label: Панели
+variant: panels_variant
+variant_settings:
+  blocks:
+    e41979d3-4611-4f68-9d40-a5d23c627952:
+      id: page_title_block
+      label: 'Page title'
+      provider: core
+      label_display: '0'
+      region: top
+      weight: 0
+      uuid: e41979d3-4611-4f68-9d40-a5d23c627952
+      context_mapping: {  }
+  id: panels_variant
+  uuid: f02062d2-fee5-4ea9-aa13-5f822087e5b9
+  label: null
+  weight: 0
+  layout: layout_twocol
+  layout_settings:
+    label: ''
+  page_title: ''
+  storage_type: page_manager
+  storage_id: test-panels_variant-0
+  builder: standard
+page: test
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

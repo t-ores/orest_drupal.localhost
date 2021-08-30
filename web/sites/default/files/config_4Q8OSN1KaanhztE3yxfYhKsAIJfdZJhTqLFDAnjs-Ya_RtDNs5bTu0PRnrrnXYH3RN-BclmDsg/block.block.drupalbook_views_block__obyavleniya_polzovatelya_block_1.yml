@@ -1,0 +1,30 @@
+uuid: 95b9ef1a-400a-44c8-bf36-28b1c70de981
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.obyavleniya_polzovatelya
+  module:
+    - system
+    - views
+  theme:
+    - drupalbook
+id: drupalbook_views_block__obyavleniya_polzovatelya_block_1
+theme: drupalbook
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:obyavleniya_polzovatelya-block_1'
+settings:
+  id: 'views_block:obyavleniya_polzovatelya-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false

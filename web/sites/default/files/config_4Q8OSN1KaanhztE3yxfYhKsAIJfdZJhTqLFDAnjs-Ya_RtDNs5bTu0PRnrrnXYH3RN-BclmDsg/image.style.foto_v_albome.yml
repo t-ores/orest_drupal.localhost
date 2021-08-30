@@ -1,0 +1,15 @@
+uuid: 0ae749b1-53ff-4ca3-b9cf-1d07e5b7e25f
+langcode: ru
+status: true
+dependencies: {  }
+name: foto_v_albome
+label: 'Фото в альбоме'
+effects:
+  b9613198-1f8a-4bef-ac18-44cd53f754d4:
+    uuid: b9613198-1f8a-4bef-ac18-44cd53f754d4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      anchor: center-center

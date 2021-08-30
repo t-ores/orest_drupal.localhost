@@ -1,0 +1,20 @@
+schemas:
+  bootstrap: 8000
+  drupalbook: 8000
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: 'public://favicon_0.ico'
+  url: 'http://drupal.local/sites/default/files/favicon_0.ico'
+  use_default: false
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: sites/default/files/logo.png
+  url: ''
+  use_default: true
+langcode: ru
+reset_http_request_cache: ''
+table: ''

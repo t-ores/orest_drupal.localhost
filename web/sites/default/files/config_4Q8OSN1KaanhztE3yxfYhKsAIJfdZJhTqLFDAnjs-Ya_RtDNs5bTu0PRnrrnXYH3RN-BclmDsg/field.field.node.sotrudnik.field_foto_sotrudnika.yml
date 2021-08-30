@@ -1,0 +1,38 @@
+uuid: 76bf6905-30b2-4e82-b2ec-11dcd94460f4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_foto_sotrudnika
+    - node.type.sotrudnik
+  module:
+    - image
+id: node.sotrudnik.field_foto_sotrudnika
+field_name: field_foto_sotrudnika
+entity_type: node
+bundle: sotrudnik
+label: 'Фото сотрудника'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: photos
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

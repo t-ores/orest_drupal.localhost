@@ -1,0 +1,30 @@
+uuid: 340e09ee-f9dd-48ba-9f32-76114e1a9eb0
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:48ae6c55-f974-4e32-bb2b-c045f7a67de9'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupal8_w3css_theme
+id: testblock
+theme: drupal8_w3css_theme
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'block_content:48ae6c55-f974-4e32-bb2b-c045f7a67de9'
+settings:
+  id: 'block_content:48ae6c55-f974-4e32-bb2b-c045f7a67de9'
+  label: 'Test Block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

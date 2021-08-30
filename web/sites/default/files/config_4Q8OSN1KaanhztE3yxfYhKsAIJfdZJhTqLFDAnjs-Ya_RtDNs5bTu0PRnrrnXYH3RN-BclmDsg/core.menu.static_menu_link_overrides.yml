@@ -1,0 +1,46 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  standard__front_page:
+    weight: -50
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:entity__block_content_type__edit_form__basic':
+    enabled: false
+    menu_name: admin
+    parent: ''
+    expanded: false
+    weight: 0
+  'admin_toolbar_tools__extra_links:entity__block_content__field_ui_fieldsbasic':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:entity.block_content_type.edit_form.basic'
+    weight: 1
+    expanded: false
+  'admin_toolbar_tools__extra_links:entity__entity_form_display__block_content__defaultbasic':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:entity.block_content_type.edit_form.basic'
+    weight: 2
+    expanded: false
+  'admin_toolbar_tools__extra_links:entity__entity_view_display__block_content__default__basic':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:entity.block_content_type.edit_form.basic'
+    weight: 3
+    expanded: false
+  'admin_toolbar_tools__extra_links:entity__block_content_type__delete_form__basic':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:entity.block_content_type.edit_form.basic'
+    weight: 5
+    expanded: false
+_core:
+  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
+langcode: ru

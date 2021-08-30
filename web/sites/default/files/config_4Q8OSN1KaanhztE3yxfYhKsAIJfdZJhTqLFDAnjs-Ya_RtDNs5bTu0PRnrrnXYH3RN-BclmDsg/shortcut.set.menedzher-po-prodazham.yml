@@ -1,0 +1,6 @@
+uuid: 984bb94d-610f-41d0-a4c3-d13f2345bd79
+langcode: en
+status: true
+dependencies: {  }
+id: menedzher-po-prodazham
+label: 'Менеджер по продажам'

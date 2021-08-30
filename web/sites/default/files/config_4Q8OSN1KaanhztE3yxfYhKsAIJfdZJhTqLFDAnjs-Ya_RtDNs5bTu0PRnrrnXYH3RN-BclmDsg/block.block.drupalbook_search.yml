@@ -1,0 +1,23 @@
+uuid: 588bc578-d0a9-4da2-b5f5-a51afb924b83
+langcode: ru
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - drupalbook
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: drupalbook_search
+theme: drupalbook
+region: sidebar_second
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

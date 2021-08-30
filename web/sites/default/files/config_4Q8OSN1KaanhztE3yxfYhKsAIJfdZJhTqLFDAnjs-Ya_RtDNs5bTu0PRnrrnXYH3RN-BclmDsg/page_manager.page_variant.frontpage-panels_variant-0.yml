@@ -1,0 +1,83 @@
+uuid: e6b79f7f-9cfb-4b9d-9d10-487233d6d388
+langcode: ru
+status: true
+dependencies:
+  config:
+    - page_manager.page.frontpage
+    - system.menu.main
+    - views.view.who_s_new
+    - views.view.who_s_online
+  content:
+    - 'block_content:basic:359e4ed2-7e5e-48bc-9c91-a605b3918072'
+  module:
+    - block_content
+    - panels
+    - system
+    - views
+id: frontpage-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    7cf97d1d-fcf9-4ee9-8fb0-824059bf0e20:
+      id: 'views_block:who_s_new-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: first
+      weight: 0
+      uuid: 7cf97d1d-fcf9-4ee9-8fb0-824059bf0e20
+      context_mapping: {  }
+    3ffca927-8bf2-45d5-b855-d327cca16640:
+      id: 'system_menu_block:main'
+      label: 'Основная навигация'
+      provider: system
+      label_display: visible
+      level: 1
+      depth: 0
+      expand_all_items: false
+      region: second
+      weight: -1
+      uuid: 3ffca927-8bf2-45d5-b855-d327cca16640
+      context_mapping: {  }
+    c27e16ae-e032-4c44-af83-16bd5d590e0d:
+      id: 'views_block:who_s_online-who_s_online_block'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: second
+      weight: 0
+      uuid: c27e16ae-e032-4c44-af83-16bd5d590e0d
+      context_mapping: {  }
+    10affff3-d863-4ed2-90ea-791430bcf32b:
+      id: 'block_content:359e4ed2-7e5e-48bc-9c91-a605b3918072'
+      label: 'Коротко о нас'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: top
+      weight: 0
+      uuid: 10affff3-d863-4ed2-90ea-791430bcf32b
+      context_mapping: {  }
+  id: panels_variant
+  uuid: e6fc9d06-13e8-4163-b715-d8783bdff5a5
+  label: null
+  weight: 0
+  layout: layout_twocol
+  layout_settings:
+    label: 'Front Page'
+  page_title: ''
+  storage_type: page_manager
+  storage_id: frontpage-panels_variant-0
+  builder: standard
+page: frontpage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

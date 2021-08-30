@@ -1,0 +1,15 @@
+uuid: 6f7a6088-6110-467c-8dc5-517e5ec99998
+name: 'Drupal 9'
+mail: yakim.oresst@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /first-page
+admin_compact_mode: false
+weight_select_max: 100
+langcode: ru
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: ''

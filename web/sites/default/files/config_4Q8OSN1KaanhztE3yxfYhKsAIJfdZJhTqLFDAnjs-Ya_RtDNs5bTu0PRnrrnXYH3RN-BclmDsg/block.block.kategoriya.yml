@@ -1,0 +1,29 @@
+uuid: 9790c3db-b89b-4348-857e-267840f84aca
+langcode: ru
+status: false
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - bootstrap
+id: kategoriya
+theme: bootstrap
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'entity_field:node:field_kategoriya'
+settings:
+  id: 'entity_field:node:field_kategoriya'
+  label: Категория
+  provider: ctools_block
+  label_display: visible
+  formatter:
+    label: above
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

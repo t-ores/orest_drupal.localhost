@@ -1,0 +1,27 @@
+custom_owlcarousel.first_page:
+  path: '/first-page'
+  defaults:
+    _controller: '\Drupal\custom_owlcarousel\Controller\FirstPageController::content'
+    _title: 'Номе'
+  requirements:
+    _permission: 'access content'
+
+drupalbook.private_content:
+  path: '/private-page'
+  defaults:
+    _controller: '\Drupal\custom_owlcarousel\Controller\FirstPageController::privateContent'
+    _title: 'Private content'
+  requirements:
+    _permission: 'access premium pages'
+
+drupalbook.display_node:
+  path: '/display-node/{node}'
+  defaults:
+    _controller: '\Drupal\custom_owlcarousel\Controller\DisplayNode::content'
+    _title_callback: '\Drupal\custom_owlcarousel\Controller\DisplayNode::getTitle'
+  requirements:
+    _custom_access: '\Drupal\custom_owlcarousel\Controller\DisplayNode::access'
+  options:
+    parameters:
+      node:
+        type: entity:node

@@ -1,0 +1,29 @@
+uuid: b4ecd644-5a13-4b71-8038-9d17f91dd735
+langcode: ru
+status: true
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_kategoriya
+theme: bootstrap_barrio
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'entity_field:node:field_kategoriya'
+settings:
+  id: 'entity_field:node:field_kategoriya'
+  label: Категория
+  provider: ctools_block
+  label_display: visible
+  formatter:
+    label: above
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

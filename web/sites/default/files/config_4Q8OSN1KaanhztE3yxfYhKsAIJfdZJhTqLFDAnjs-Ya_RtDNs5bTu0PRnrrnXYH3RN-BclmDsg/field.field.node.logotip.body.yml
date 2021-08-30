@@ -1,0 +1,23 @@
+uuid: a0d6c30c-9b7a-49e7-8d77-366f4b13d472
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.logotip
+  module:
+    - text
+id: node.logotip.body
+field_name: body
+entity_type: node
+bundle: logotip
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

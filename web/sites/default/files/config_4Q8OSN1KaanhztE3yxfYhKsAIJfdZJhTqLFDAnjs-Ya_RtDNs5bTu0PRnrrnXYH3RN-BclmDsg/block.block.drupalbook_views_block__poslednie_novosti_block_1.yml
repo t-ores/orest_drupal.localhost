@@ -1,0 +1,32 @@
+uuid: d4e5ba38-ed96-4f1e-ad86-6e79a9d9ef55
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.poslednie_novosti
+  module:
+    - ctools
+    - views
+  theme:
+    - drupalbook
+id: drupalbook_views_block__poslednie_novosti_block_1
+theme: drupalbook
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'views_block:poslednie_novosti-block_1'
+settings:
+  id: 'views_block:poslednie_novosti-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

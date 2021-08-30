@@ -1,0 +1,21 @@
+uuid: 88ee3c3b-261b-4aa7-b98d-94b3f561c6c5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_rozhdeniya
+    - node.type.sotrudnik
+  module:
+    - datetime
+id: node.sotrudnik.field_data_rozhdeniya
+field_name: field_data_rozhdeniya
+entity_type: node
+bundle: sotrudnik
+label: 'Дата рождения'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

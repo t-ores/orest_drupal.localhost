@@ -1,0 +1,41 @@
+uuid: 3049473c-0ac6-480b-8269-ac91cdc74558
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_izobrazhenie_novosti
+    - image.style.miniatyura_novosti
+    - node.type.news
+  module:
+    - image
+    - text
+    - user
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_izobrazhenie_novosti:
+    weight: 102
+    label: above
+    settings:
+      image_style: miniatyura_novosti
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

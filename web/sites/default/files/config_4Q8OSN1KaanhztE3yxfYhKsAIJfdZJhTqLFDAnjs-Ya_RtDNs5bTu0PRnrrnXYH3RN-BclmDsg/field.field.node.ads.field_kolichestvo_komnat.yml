@@ -1,0 +1,29 @@
+uuid: 976e2515-5766-481f-b72b-0691f4011061
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kolichestvo_komnat
+    - node.type.ads
+    - taxonomy.vocabulary.kolichestvo_komnat
+id: node.ads.field_kolichestvo_komnat
+field_name: field_kolichestvo_komnat
+entity_type: node
+bundle: ads
+label: 'Количество комнат'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      kolichestvo_komnat: kolichestvo_komnat
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: 29a5a708-fb80-49b4-aaf0-ab20c47dd3e3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.menedzher
+  module:
+    - user
+id: user_remove_role_action.menedzher
+label: 'Удалить роль Менеджер из выбранных пользователей'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: menedzher

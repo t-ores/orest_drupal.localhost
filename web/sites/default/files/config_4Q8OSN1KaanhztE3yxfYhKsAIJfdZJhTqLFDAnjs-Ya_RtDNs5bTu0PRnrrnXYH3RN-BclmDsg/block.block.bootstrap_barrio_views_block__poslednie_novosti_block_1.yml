@@ -1,0 +1,32 @@
+uuid: 0d3bf4ee-7cfb-4ce9-b36f-2ac2a65324ff
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.poslednie_novosti
+  module:
+    - ctools
+    - views
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_views_block__poslednie_novosti_block_1
+theme: bootstrap_barrio
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'views_block:poslednie_novosti-block_1'
+settings:
+  id: 'views_block:poslednie_novosti-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

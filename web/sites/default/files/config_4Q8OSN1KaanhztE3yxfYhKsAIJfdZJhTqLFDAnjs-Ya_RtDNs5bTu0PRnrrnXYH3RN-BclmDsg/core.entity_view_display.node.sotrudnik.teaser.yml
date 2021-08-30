@@ -1,0 +1,49 @@
+uuid: 7650de89-f0af-4016-ac70-257e5ec8745f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sotrudnik.body
+    - field.field.node.sotrudnik.field_data_rozhdeniya
+    - field.field.node.sotrudnik.field_dolzhnost
+    - field.field.node.sotrudnik.field_foto_sotrudnika
+    - field.field.node.sotrudnik.field_otdel
+    - image.style.foto_sotrudnika_melenkoe
+    - node.type.sotrudnik
+  module:
+    - image
+    - text
+    - user
+id: node.sotrudnik.teaser
+targetEntityType: node
+bundle: sotrudnik
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_foto_sotrudnika:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: foto_sotrudnika_melenkoe
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_data_rozhdeniya: true
+  field_dolzhnost: true
+  field_otdel: true
+  langcode: true

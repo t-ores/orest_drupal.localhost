@@ -1,0 +1,22 @@
+uuid: f28bea36-45e4-4820-bf1e-8ce15876ce54
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - drupal8_w3css_theme
+_core:
+  default_config_hash: 3wV-8WzENa5lVh3Ah1PrjOzkUANvgV8XaHbux7KeAdM
+id: drupal8_w3css_theme_local_tasks
+theme: drupal8_w3css_theme
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

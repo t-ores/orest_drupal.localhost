@@ -1,0 +1,8 @@
+uuid: 6f2a4a3d-274e-4e24-98b1-e8fa46ec38c3
+langcode: ru
+status: true
+dependencies: {  }
+name: Отделы
+vid: otdely
+description: ''
+weight: 0

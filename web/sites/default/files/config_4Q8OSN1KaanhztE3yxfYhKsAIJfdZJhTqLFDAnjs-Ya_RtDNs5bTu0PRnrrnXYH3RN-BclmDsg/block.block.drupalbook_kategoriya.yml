@@ -1,0 +1,29 @@
+uuid: 9720140c-4996-4571-a410-e98cf4382841
+langcode: ru
+status: true
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - drupalbook
+id: drupalbook_kategoriya
+theme: drupalbook
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'entity_field:node:field_kategoriya'
+settings:
+  id: 'entity_field:node:field_kategoriya'
+  label: Категория
+  provider: ctools_block
+  label_display: visible
+  formatter:
+    label: above
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 5b84624b-cafe-42c1-81f7-5b3d735b8e40
+langcode: ru
+status: false
+dependencies:
+  config:
+    - views.view.slideshow
+  module:
+    - system
+    - views
+  theme:
+    - drupalbook
+id: views_block__slideshow_block_1_2
+theme: drupalbook
+region: content
+weight: -15
+provider: null
+plugin: 'views_block:slideshow-block_1'
+settings:
+  id: 'views_block:slideshow-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

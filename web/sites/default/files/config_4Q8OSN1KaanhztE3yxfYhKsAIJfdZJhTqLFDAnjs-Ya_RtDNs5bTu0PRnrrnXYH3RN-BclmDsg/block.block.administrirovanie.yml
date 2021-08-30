@@ -1,0 +1,25 @@
+uuid: 333fdea4-61a5-407b-8f97-83ca7f4e6f06
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.admin
+  module:
+    - system
+  theme:
+    - drupal8_w3css_theme
+id: administrirovanie
+theme: drupal8_w3css_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:admin'
+settings:
+  id: 'system_menu_block:admin'
+  label: Администрирование
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

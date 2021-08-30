@@ -1,0 +1,11 @@
+uuid: 9e07b53a-ba5e-4085-a15d-aa7758797c9c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.otdely
+id: taxonomy_term.otdely
+target_entity_type_id: taxonomy_term
+target_bundle: otdely
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,8 @@
+name: Hello World
+description: 'HelloWorld module - Block API learning!'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 1.0
+package: Examples
+configure: collect_phone.admin_settings

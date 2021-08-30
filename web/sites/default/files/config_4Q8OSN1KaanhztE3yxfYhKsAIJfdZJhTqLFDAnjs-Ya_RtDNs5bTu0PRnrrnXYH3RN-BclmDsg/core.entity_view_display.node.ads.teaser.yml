@@ -1,0 +1,38 @@
+uuid: 0743eb19-c95b-4a7a-aeb8-0fe09baad84e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ads.body
+    - field.field.node.ads.field_kategoriya
+    - field.field.node.ads.field_kolichestvo_komnat
+    - field.field.node.ads.field_tip_obyavleniya
+    - node.type.ads
+  module:
+    - text
+    - user
+id: node.ads.teaser
+targetEntityType: node
+bundle: ads
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_kategoriya: true
+  field_kolichestvo_komnat: true
+  field_tip_obyavleniya: true
+  langcode: true
+  search_api_excerpt: true

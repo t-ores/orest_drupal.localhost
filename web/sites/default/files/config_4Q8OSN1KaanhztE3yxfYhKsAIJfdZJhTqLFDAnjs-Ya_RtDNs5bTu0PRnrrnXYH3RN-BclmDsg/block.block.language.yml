@@ -1,0 +1,30 @@
+uuid: 833e596a-6334-408b-bfb9-4ef07e4cdabc
+langcode: ru
+status: false
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - bootstrap
+id: language
+theme: bootstrap
+region: navigation_collapsible
+weight: -8
+provider: null
+plugin: 'entity_field:node:langcode'
+settings:
+  id: 'entity_field:node:langcode'
+  label: Language
+  provider: ctools_block
+  label_display: visible
+  formatter:
+    label: hidden
+    type: language
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

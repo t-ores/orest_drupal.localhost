@@ -1,0 +1,21 @@
+uuid: 34aea801-aa3a-4f97-9dbb-0864a14f1024
+langcode: ru
+status: true
+dependencies:
+  module:
+    - cstm_block_plugin
+  theme:
+    - stark
+id: stark_myfirstblock_3
+theme: stark
+region: sidebar_first
+weight: -13
+provider: null
+plugin: drupalbook_first_block_block
+settings:
+  id: drupalbook_first_block_block
+  label: 'My first block'
+  provider: cstm_block_plugin
+  label_display: visible
+  drupalbook_first_block_settings: t-ores
+visibility: {  }

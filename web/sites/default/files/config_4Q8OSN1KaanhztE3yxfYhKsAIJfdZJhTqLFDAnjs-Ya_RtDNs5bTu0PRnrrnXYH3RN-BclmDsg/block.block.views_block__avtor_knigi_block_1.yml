@@ -1,0 +1,33 @@
+uuid: 1a4bbc03-7f49-4575-8659-eb7b28aa3288
+langcode: ru
+status: false
+dependencies:
+  config:
+    - views.view.avtor_knigi
+  module:
+    - ctools
+    - views
+  theme:
+    - bootstrap
+id: views_block__avtor_knigi_block_1
+theme: bootstrap
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:avtor_knigi-block_1'
+settings:
+  id: 'views_block:avtor_knigi-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      kniga: kniga
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

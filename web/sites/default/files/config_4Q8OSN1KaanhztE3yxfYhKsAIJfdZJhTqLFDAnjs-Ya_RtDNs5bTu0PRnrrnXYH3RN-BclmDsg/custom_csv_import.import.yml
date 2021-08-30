@@ -1,0 +1,8 @@
+skip_first_line: 1
+delimiter: ;
+enclosure: ','
+_core:
+  default_config_hash: AC1FXyu_IPwDBxu8xnRY6K3pwHmMhiTgYPWaBh26Vx8
+langcode: ru
+fid: '74'
+creation: 1628760262

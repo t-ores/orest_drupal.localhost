@@ -1,0 +1,20 @@
+uuid: 67eb1cd6-243a-4c81-afab-79db9b51dee4
+langcode: ru
+status: false
+dependencies:
+  module:
+    - language
+  theme:
+    - drupal8_w3css_theme
+id: pereklyuchatelyazyka
+theme: drupal8_w3css_theme
+region: primary_menu
+weight: -6
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Переключатель языка'
+  provider: language
+  label_display: visible
+visibility: {  }

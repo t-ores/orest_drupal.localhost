@@ -1,0 +1,38 @@
+uuid: e0da31e2-a0de-4682-830f-d6f19257cf20
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_image
+    - field.field.node.article.field_my_color
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - my_color_field
+    - user
+_core:
+  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  field_my_color:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: my_color_field_default_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_image: true
+  field_tags: true
+  langcode: true
+  search_api_excerpt: true

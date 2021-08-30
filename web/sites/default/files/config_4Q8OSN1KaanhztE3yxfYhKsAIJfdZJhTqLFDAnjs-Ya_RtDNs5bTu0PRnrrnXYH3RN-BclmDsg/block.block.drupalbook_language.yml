@@ -1,0 +1,30 @@
+uuid: 9d1467b8-9759-4b09-b6f1-619f8eb8864c
+langcode: ru
+status: false
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - drupalbook
+id: drupalbook_language
+theme: drupalbook
+region: navigation_collapsible
+weight: -6
+provider: null
+plugin: 'entity_field:node:langcode'
+settings:
+  id: 'entity_field:node:langcode'
+  label: Language
+  provider: ctools_block
+  label_display: visible
+  formatter:
+    label: hidden
+    type: language
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

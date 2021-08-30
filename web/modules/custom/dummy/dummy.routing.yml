@@ -1,0 +1,61 @@
+devel.admin_settings:
+  path: '/dummy/form-with-modal-button'
+  defaults:
+    _form: '\Drupal\dummy\Form\FormWithModalButton'
+    _title: 'Form with modal button'
+  requirements:
+    _permission: 'access content'
+
+dummy.ajax_form_submit_example:
+  path: '/dummy/ajax-form-submit-example'
+  defaults:
+    _form: '\Drupal\dummy\Form\AjaxFormSubmitExample'
+    _title: 'Form with AJAX submit'
+  requirements:
+    _permission: 'access content'
+
+dummy.example.first:
+  path: '/example/first'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\dummy\Controller\HookThemeExample1::build'
+  requirements:
+    _permission: 'access content'
+
+dummy.example.second:
+  path: '/example/second'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\dummy\Controller\HookThemeExample2::build'
+  requirements:
+    _permission: 'access content'
+
+dummy.example.third:
+  path: '/example/third'
+  defaults:
+    _title: 'Third'
+    _controller: '\Drupal\dummy\Controller\HookThemeExample3::build'
+  requirements:
+    _permission: 'access content'
+
+dummy.language_negotiation_ip_settings:
+  path: '/admin/config/regional/language/detection/ip'
+  defaults:
+    _form: '\Drupal\dummy\Form\LanguageNegotiationIpSettings'
+    _title: 'Language IP negotiation settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+dummy.lazy_page:
+  path: '/lazy-page'
+  defaults:
+    _controller: '\Drupal\dummy\Controller\LazyPage::build'
+  requirements:
+    _permission: 'access content'
+
+dummy.test:
+  path: '/create-node'
+  defaults:
+    _controller: '\Drupal\dummy\Controller\EntityTest::build'
+  requirements:
+    _permission: 'access content'

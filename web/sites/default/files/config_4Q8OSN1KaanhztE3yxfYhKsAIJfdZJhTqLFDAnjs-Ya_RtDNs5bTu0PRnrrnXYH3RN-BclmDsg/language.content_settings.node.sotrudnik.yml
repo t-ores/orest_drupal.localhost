@@ -1,0 +1,11 @@
+uuid: 67647fd0-38e3-4d23-b135-54692ca26d11
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.sotrudnik
+id: node.sotrudnik
+target_entity_type_id: node
+target_bundle: sotrudnik
+default_langcode: site_default
+language_alterable: false

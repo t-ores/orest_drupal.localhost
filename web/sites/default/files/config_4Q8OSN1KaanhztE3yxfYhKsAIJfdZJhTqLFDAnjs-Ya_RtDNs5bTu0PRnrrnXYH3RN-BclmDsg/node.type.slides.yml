@@ -1,0 +1,18 @@
+uuid: c3953b8b-5974-4ab6-95ec-48d786a006a0
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Слайды
+type: slides
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,29 @@
+uuid: d1c090c0-0ab8-4bf6-931c-e663c19c7202
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_avtor_knigi
+    - node.type.avtor
+    - node.type.kniga
+id: node.kniga.field_avtor_knigi
+field_name: field_avtor_knigi
+entity_type: node
+bundle: kniga
+label: 'Автор книги'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      avtor: avtor
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

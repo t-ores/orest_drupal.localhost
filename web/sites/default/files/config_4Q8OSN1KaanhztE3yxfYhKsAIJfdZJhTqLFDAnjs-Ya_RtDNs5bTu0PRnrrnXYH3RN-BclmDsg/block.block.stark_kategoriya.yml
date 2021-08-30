@@ -1,0 +1,29 @@
+uuid: f4acacfd-69b5-4e5c-95ce-27aaaa2877cc
+langcode: ru
+status: true
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - stark
+id: stark_kategoriya
+theme: stark
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'entity_field:node:field_kategoriya'
+settings:
+  id: 'entity_field:node:field_kategoriya'
+  label: Категория
+  provider: ctools_block
+  label_display: visible
+  formatter:
+    label: above
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

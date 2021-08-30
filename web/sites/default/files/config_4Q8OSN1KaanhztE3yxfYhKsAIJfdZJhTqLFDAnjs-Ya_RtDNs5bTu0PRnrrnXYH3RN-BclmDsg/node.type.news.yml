@@ -1,0 +1,18 @@
+uuid: 1c255280-5b91-4452-b48b-af9377453152
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - footer
+    parent: 'footer:'
+name: Новость
+type: news
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,6 @@
+uuid: 5c27efee-27e6-45b7-b5cb-82f8443ccd21
+langcode: ru
+status: true
+dependencies: {  }
+id: moderator
+label: Модератор

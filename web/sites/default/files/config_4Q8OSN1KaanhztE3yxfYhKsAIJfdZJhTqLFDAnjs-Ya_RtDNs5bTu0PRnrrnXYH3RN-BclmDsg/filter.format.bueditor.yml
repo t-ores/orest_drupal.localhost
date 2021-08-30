@@ -1,0 +1,8 @@
+uuid: e9c298bb-569c-4125-b66a-c1a18ffc1711
+langcode: ru
+status: true
+dependencies: {  }
+name: BUEditor
+format: bueditor
+weight: 0
+filters: {  }

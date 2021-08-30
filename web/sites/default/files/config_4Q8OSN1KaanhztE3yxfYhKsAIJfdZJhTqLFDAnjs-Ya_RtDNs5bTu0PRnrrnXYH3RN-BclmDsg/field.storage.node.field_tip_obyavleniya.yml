@@ -1,0 +1,27 @@
+uuid: c2a0d759-b968-4864-8beb-3e60204b3b7a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tip_obyavleniya
+field_name: field_tip_obyavleniya
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Продам
+      label: Продам
+    -
+      value: Куплю
+      label: Куплю
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

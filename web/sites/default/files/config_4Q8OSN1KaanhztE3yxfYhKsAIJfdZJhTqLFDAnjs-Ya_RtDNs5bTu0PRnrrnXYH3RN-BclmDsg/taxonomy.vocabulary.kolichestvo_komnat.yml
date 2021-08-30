@@ -1,0 +1,8 @@
+uuid: c7dfe56f-c441-40c1-a435-889a12e7a5ea
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Количество комнат'
+vid: kolichestvo_komnat
+description: ''
+weight: 0

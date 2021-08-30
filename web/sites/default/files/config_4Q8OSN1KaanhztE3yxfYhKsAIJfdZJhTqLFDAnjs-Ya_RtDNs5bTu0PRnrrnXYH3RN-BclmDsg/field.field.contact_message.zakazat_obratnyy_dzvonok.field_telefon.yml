@@ -1,0 +1,21 @@
+uuid: ee2a937b-4683-4b6d-8ac9-4d80c07b6a5c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.zakazat_obratnyy_dzvonok
+    - field.storage.contact_message.field_telefon
+  module:
+    - telephone
+id: contact_message.zakazat_obratnyy_dzvonok.field_telefon
+field_name: field_telefon
+entity_type: contact_message
+bundle: zakazat_obratnyy_dzvonok
+label: Телефон
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

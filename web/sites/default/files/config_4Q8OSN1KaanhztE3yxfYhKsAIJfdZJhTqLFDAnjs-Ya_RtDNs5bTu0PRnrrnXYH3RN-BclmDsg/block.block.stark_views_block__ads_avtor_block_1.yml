@@ -1,0 +1,30 @@
+uuid: aece1815-8390-4c5d-8a27-6accc36977a2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.ads_avtor
+  module:
+    - system
+    - views
+  theme:
+    - stark
+id: stark_views_block__ads_avtor_block_1
+theme: stark
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:ads_avtor-block_1'
+settings:
+  id: 'views_block:ads_avtor-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/ads/*'
+    negate: false

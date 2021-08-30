@@ -1,0 +1,30 @@
+uuid: 3631fff2-bfda-41c2-b90e-d29b2b64f94d
+langcode: ru
+status: false
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_language
+theme: bootstrap_barrio
+region: top_header
+weight: -6
+provider: null
+plugin: 'entity_field:node:langcode'
+settings:
+  id: 'entity_field:node:langcode'
+  label: Language
+  provider: ctools_block
+  label_display: visible
+  formatter:
+    label: hidden
+    type: language
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

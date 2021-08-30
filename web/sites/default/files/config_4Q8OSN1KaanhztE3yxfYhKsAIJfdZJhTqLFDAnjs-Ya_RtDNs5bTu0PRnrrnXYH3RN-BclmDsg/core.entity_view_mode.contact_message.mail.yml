@@ -1,0 +1,10 @@
+uuid: 0f65d0c5-6c63-475e-9360-57a496821986
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.mail
+label: Mail
+targetEntityType: contact_message
+cache: true

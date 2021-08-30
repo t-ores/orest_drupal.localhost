@@ -1,0 +1,49 @@
+<?php
+/**
+ * @file
+ * File for hook
+ */
+
+/* Полезные методы для работы с плагинами
+ # Доступ к сервису наших плагинов.
+$plugin_service = \Drupal::service('plugin.manager.plugin_messages');
+# Получение информации о всех объявленных плагинах. (массив)
+$plugin_definitions = $plugin_service->getDefinitions();
+# Получение данных о конкретном плагине, по его ID.
+$plugin_definition = $plugin_service->getDefinition('default_plugin_example_1');
+# Проверяет, есть ли данный плагин или нет.
+$has_plugin_definition = $plugin_service->hasDefinition('default_plugin_example_1');
+# Создает объект плагина. Вторым параметром вы можете передать массив с
+# нужной для вас информацией. Эти данные доступны в плагине
+# $this->configuration - это удобно когда необходимо плагинам передавать
+# какую-либо информацию которая может оказаться полезной. Например сущность
+# если этот плагин как-то взаимодействует с сущностью. Таким образом авторам
+# кастомных плагинов не придется искать конкретную сущность и загружать её.
+$plugin_instance = $plugin_service->createInstance('default_plugin_example_1');
+
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function plugin_messages_preprocess_page(&$variables) {
+  $plugin_service = \Drupal::service('plugin.manager.plugin_messages');
+  foreach ($plugin_service->getDefinitions() as $plugin_id => $plugin) {
+    $instance = $plugin_service->createInstance($plugin_id);
+    $message_type = $instance->getMessageType();
+    $message = $instance->getMessage();
+    # Переводим массив с адресами для отображения в строку, где каждый элемент
+    # массива с новой строки.
+    $pages = implode("\n", $instance->getPages());
+    $current_path = \Drupal::service('path.current')->getPath();
+    $path_match = \Drupal::service('path.matcher')->matchPath($current_path, $pages);
+
+    # Мы будем выводить сообщение, если не задано страниц для вывода - это
+    # значит что сообщение нужно выводить везде, а если задано, то только на тех
+    # страницах (паттернах) которые указаны. Поддерживаются <front>, node/*.
+    if (empty($instance->getPages()) || $path_match) {
+      $drupal_set_message = \Drupal::messenger();
+      $drupal_set_message->addMessage($message, $message_type);
+    }
+  }
+}

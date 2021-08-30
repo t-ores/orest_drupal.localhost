@@ -1,0 +1,163 @@
+<?php
+
+/**
+ * @file
+ */
+use Drupal\node\Entity\Node;
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Form ID: collect_phone
+ */
+function helloworld_form_collect_phone_alter(&$form, &$form_state) {
+  $form['phone_number']['#description'] = t('Start with + and your country code.');
+}
+
+/**
+ * Используем hook_page_attachments().
+ *
+ * Это новый хук Drupal 8, как раз для целей, когда надо подцепить библиотеку
+ * на определенных или всех страницах, а может и для каких-то определенных
+ * ролей и т.д.
+ */
+//function helloworld_page_attachments(array &$attachments)
+//{
+//  // Первый helloworld - название модуля, а второй - название либы из yml файла.
+//  $attachments['#attached']['library'][] = 'helloworld/helloworld';
+//}
+
+/**
+ * Implements hook_cron().
+ */
+function helloworld_cron() {
+  $queue = \Drupal::queue('helloworld_mass_sending');
+  # Время которое мы отводим на выполнение очередей за данный крон. (30 сек)
+  $end = time() + 30;
+  while (time() < $end && ($item = $queue->claimItem())) {
+    # Данные которые мы добавляли в очередь находятся в $item->data.
+    $node = Node::create(array(
+      'type' => 'page',
+      'title' => 'Материал от ' . $item->data['name'],
+      'langcode' => 'ru',
+      'uid' => $item->data['uid'],
+      'status' => 1,
+      'field_fields' => array(),
+    ));
+    $node->save();
+
+    # Удаляем его из очереди, так как материал создан.
+    $queue->deleteItem($item);
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function helloworld_preprocess_html(&$variables) {
+  $title = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'title',
+      'content' => 'Hello World!',
+    ],
+  ];
+  $variables['#attached']['html_head'][] = [$title, 'title'];
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+
+//function helloworld_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode, $langcode) {
+//  # Добавляем только, если сущность типа "нода".
+//  print_r($entity->bundle());
+//
+//  if ($entity->getEntityTypeId() == 'node') {
+//    $title = [
+//      '#tag' => 'meta',
+//      '#attributes' => [
+//        'name' => 'title',
+//        # В данном случае, заголовок в метатеге будет взят из сущности.
+//        //'content' => \Drupal\Component\Utility\SafeMarkup::checkPlain($entity->title->value),
+//        'content' => $entity->bundle(),
+//      ],
+//    ];
+//    $build['#attached']['html_head'][] = [$title, 'title'];
+//  }
+//}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function helloworld_page_attachments(array &$page) {
+
+  // Первый helloworld - название модуля, а второй - название либы из yml файла.
+  //$attachments['#attached']['library'][] = 'helloworld/helloworld';
+
+  # Наш render array.
+  $json_ld = [
+    # Тип тега HTML, по стандарту json-ld - он <script>
+    '#tag' => 'script',
+    # Атрибут type по стандарту должен быть такого значения. Никаким другим.
+    '#attributes' => [
+      'type' => 'application/ld+json',
+    ],
+    #
+    '#value' => \Drupal\Component\Serialization\Json::encode([
+      '@context' => 'http://json-ld.org/contexts/person.jsonld',
+      '@id' => 'http://dbpedia.org/resource/John_Lennon',
+      'name' => 'John Lennon',
+      'born' => '1940-10-09',
+      'spouse' => 'http://dbpedia.org/resource/Cynthia_Lennon',
+    ])
+  ];
+
+  $page['#attached']['html_head'][] = [$json_ld, 'json-ld'];
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+
+function helloworld_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  # Добавляем только к сущности "пользователь"
+  # Также мы будем выводить данные только на странице пользователя. Ведь нам
+  # не нужно выводить их везде где выводятся пользователи, а толкьо на его
+  # конкретной странице.
+  if ($entity->getEntityTypeId() == 'user' && $view_mode == 'full') {
+    $json_ld = [
+      '#tag' => 'script',
+      '#attributes' => [
+        'type' => 'application/ld+json',
+      ],
+      '#value' => \Drupal\Component\Serialization\Json::encode([
+        '@context' => 'http://schema.org/',
+        '@type' => 'Person',
+        'name' => $entity->field_name->value,
+        'jobTitle' => $entity->field_post->value,
+        'telephone' => $entity->field_phone->value,
+        'url' => $entity->field_website->uri,
+      ])
+    ];
+
+    $build['#attached']['html_head'][] = [$json_ld, 'json-ld'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function helloworld_preprocess_toolbar(&$variables) {
+  $variables['#attached']['library'][] = 'helloworld/helloworld.toolbar';
+}
+
+/**
+ * Implements hook_imagemagick_arguments_alter().
+ */
+function helloworld_imagemagick_arguments_alter(\Drupal\imagemagick\ImagemagickExecArguments $arguments, $command) {
+  // https://developers.google.com/speed/docs/insights/OptimizeImages
+  $arguments->add('-sampling-factor 4:2:0');
+  // Progression JPEG and interlaced PNG's support.
+  $arguments->add('-interlace Plane');
+  // Clean image for all unused data. EXIF etcetera.
+  $arguments->add('-strip');
+}

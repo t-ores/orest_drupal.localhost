@@ -1,0 +1,11 @@
+uuid: 67c51ec5-cfa4-4505-95eb-bd5abaee0a89
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.foto_albom
+id: node.foto_albom
+target_entity_type_id: node
+target_bundle: foto_albom
+default_langcode: site_default
+language_alterable: false

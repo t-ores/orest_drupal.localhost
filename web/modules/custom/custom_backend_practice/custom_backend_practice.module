@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * hook_preprocess_views_view().
+ */
+function custom_backend_practice_preprocess_views_view(&$variables) {
+  if ($variables['view']->storage->id() == 'slideshow') {
+    $variables['#attached']['library'][] = 'custom_owlcarousel/custom_owlcarousel';
+  }
+}

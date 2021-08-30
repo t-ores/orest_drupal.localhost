@@ -1,0 +1,30 @@
+uuid: f67e79ab-1841-41d0-8952-45d3cd66416d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.ads_for_this_type
+  module:
+    - system
+    - views
+  theme:
+    - drupalbook
+id: drupalbook_views_block__ads_for_this_type_block_1
+theme: drupalbook
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:ads_for_this_type-block_1'
+settings:
+  id: 'views_block:ads_for_this_type-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/taxonomy/term/*'
+    negate: false

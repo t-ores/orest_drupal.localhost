@@ -1,0 +1,8 @@
+uuid: 1abfbc8a-85a5-49a6-83c5-d0ab498fb2a9
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Категория обьявления'
+vid: ads_category
+description: ''
+weight: 0

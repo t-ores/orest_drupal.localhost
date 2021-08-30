@@ -1,0 +1,41 @@
+uuid: 83d1cc72-8d83-4812-93a6-c1c4160fef79
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.logotip.body
+    - field.field.node.logotip.field_logo
+    - node.type.logotip
+  module:
+    - image
+    - text
+    - user
+id: node.logotip.default
+targetEntityType: node
+bundle: logotip
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_logo:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

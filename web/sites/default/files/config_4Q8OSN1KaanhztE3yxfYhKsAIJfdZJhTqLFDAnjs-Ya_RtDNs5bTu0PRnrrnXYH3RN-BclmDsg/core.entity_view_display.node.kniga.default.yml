@@ -1,0 +1,39 @@
+uuid: b07021c5-f8d5-46f1-99ec-dcbf82feb9a2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.kniga.body
+    - field.field.node.kniga.field_avtor_knigi
+    - node.type.kniga
+  module:
+    - text
+    - user
+id: node.kniga.default
+targetEntityType: node
+bundle: kniga
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_avtor_knigi:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: 9bd0b443-df83-42bb-a7e6-a6b703ef7dd8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.archive
+  module:
+    - system
+    - views
+  theme:
+    - drupalbook
+id: drupalbook_views_block__archive_block_1
+theme: drupalbook
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_block:archive-block_1'
+settings:
+  id: 'views_block:archive-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/archive/*'
+    negate: false

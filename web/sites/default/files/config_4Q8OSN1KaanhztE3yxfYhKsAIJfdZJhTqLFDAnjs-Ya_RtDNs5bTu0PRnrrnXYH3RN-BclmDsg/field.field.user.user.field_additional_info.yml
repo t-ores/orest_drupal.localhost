@@ -1,0 +1,20 @@
+uuid: 6214153f-c580-4320-988a-a16150ff6222
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_additional_info
+  module:
+    - user
+id: user.user.field_additional_info
+field_name: field_additional_info
+entity_type: user
+bundle: user
+label: 'Дополнительная информацыя'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

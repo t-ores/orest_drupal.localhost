@@ -1,0 +1,34 @@
+uuid: 6887f35e-a198-4f53-b855-0ca907e4f72f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.logotip.body
+    - field.field.node.logotip.field_logo
+    - node.type.logotip
+  module:
+    - text
+    - user
+id: node.logotip.teaser
+targetEntityType: node
+bundle: logotip
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_logo: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,66 @@
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  logo: true
+  name: true
+  node_user_picture: 1
+  slogan: true
+facebook_url: 'https://www.facebook.com/flashwebcenter'
+twitter_url: ''
+pinterest_url: ''
+google_plus_url: ''
+linkedin_url: 'http://www.linkedin.com/company/flash-web-center'
+instagram_url: 'https://www.instagram.com/flashwebcenter'
+youtube_url: 'https://www.youtube.com/user/flashwebcenter'
+drupal_url: ''
+rss_url: ''
+copyright_text: 'Copyright 2021 - All Rights Reserved'
+show_social_icon: 1
+show_credit_link: 1
+top_region: 1
+main_region: 1
+bottom_region: 1
+footer_region: 1
+full_opacity_onscroll: 1
+_core:
+  default_config_hash: aSeZVPmDpdE1LYFstol84GsOP8rc7wba2KjnSWbnHQY
+langcode: ru
+logo:
+  use_default: 0
+  path: 'public://logo.png'
+favicon:
+  use_default: 0
+  path: 'public://favicon.ico'
+  mimetype: image/vnd.microsoft.icon
+d8w3css_font_awesome_4: 1
+d8w3css_google_font: 1
+website_width: ''
+equal_width: 0
+current_theme: ''
+color_page_wrapper: ''
+color_header: ''
+color_primary_menu: ''
+color_welcome_text: ''
+color_highlighted: ''
+color_top_container: ''
+color_top_first: ''
+color_top_second: ''
+color_top_third: ''
+color_page_title: ''
+color_main: ''
+color_breadcrumb: ''
+color_sidebar_first: ''
+color_content: ''
+color_sidebar_second: ''
+color_bottom_container: ''
+color_bottom_first: ''
+color_bottom_second: ''
+color_bottom_third: ''
+color_bottom_forth: ''
+color_footer_container: ''
+color_footer_first: ''
+color_footer_second: ''
+color_footer_third: ''
+color_footer_menu: ''
+color_copyright: ''

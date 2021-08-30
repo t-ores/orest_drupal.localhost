@@ -1,0 +1,112 @@
+uuid: cd7d65c8-c53d-4698-8096-9ed30e1839c3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.ads.body
+    - field.field.node.ads.field_kategoriya
+    - field.field.node.ads.field_kolichestvo_komnat
+    - field.field.node.ads.field_tip_obyavleniya
+    - node.type.ads
+  module:
+    - ds
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - node_title
+        - langcode
+        - links
+        - field_kolichestvo_komnat
+      right:
+        - body
+        - node_link
+        - field_kategoriya
+        - field_tip_obyavleniya
+        - node_submitted_by
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+      node_link:
+        plugin_id: node_link
+        weight: 5
+        label: above
+        formatter: default
+      node_submitted_by:
+        plugin_id: node_submitted_by
+        weight: 8
+        label: above
+        formatter: ds_post_date_long
+id: node.ads.default
+targetEntityType: node
+bundle: ads
+mode: default
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: right
+  field_kategoriya:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: right
+  field_kolichestvo_komnat:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: left
+  field_tip_obyavleniya:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: right
+  langcode:
+    type: language
+    weight: 1
+    region: left
+    label: hidden
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: left
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

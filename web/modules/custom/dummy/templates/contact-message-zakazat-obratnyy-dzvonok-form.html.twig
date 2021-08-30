@@ -1,0 +1,25 @@
+{% set bem_block = 'contact-message-zakazat-obratnyy-dzvonok-form' %}
+
+
+<div class="lipsum-2">{{ text.lipsum(40) }}</div>
+
+
+{{ dries_quote }}
+
+<div {{ attributes.addClass(bem_block) }}>
+  <header class="{{ bem_block }}__header">
+    <div class="{{ bem_block }}__header-item">{{ form.name }}</div>
+    <div class="{{ bem_block }}__header-item">{{ form.mail }}</div>
+    <div class="{{ bem_block }}__header-item">{{ form.subject }}</div>
+  </header>
+  {{ form.message }}
+
+{#  {{ form.copy }}#}
+  {{ form.footer }}
+  {{ form.actions }}
+
+  {{ form.form_build_id }}
+  {{ form.form_token }}
+  {{ form.form_id }}
+  {{ form.langcode }}
+</div>

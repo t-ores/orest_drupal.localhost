@@ -1,0 +1,6 @@
+name: Custom OwlCarousel
+description: Adds style to Views pager
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: t-ores

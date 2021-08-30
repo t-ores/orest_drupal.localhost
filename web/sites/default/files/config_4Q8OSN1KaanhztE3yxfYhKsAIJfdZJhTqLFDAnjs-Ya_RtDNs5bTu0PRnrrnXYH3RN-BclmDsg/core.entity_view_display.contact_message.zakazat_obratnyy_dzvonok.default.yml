@@ -1,0 +1,32 @@
+uuid: ce4a4f17-d4c7-4bf3-89fa-d1271eddf55e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - contact.form.zakazat_obratnyy_dzvonok
+    - field.field.contact_message.zakazat_obratnyy_dzvonok.field_telefon
+  module:
+    - telephone
+id: contact_message.zakazat_obratnyy_dzvonok.default
+targetEntityType: contact_message
+bundle: zakazat_obratnyy_dzvonok
+mode: default
+content:
+  field_telefon:
+    weight: 1
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  message:
+    type: basic_string
+    weight: 0
+    label: above
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

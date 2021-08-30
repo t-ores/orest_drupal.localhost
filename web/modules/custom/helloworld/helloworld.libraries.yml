@@ -1,0 +1,56 @@
+helloworld:
+  version: 1.x
+  js:
+    js/script.js: {}
+  # Так как наш скрипт использует jQuery, мы устанавливаем зависимость/
+  dependencies:
+    - core/jquery
+
+helloworld.toolbar:
+  version: VERSION
+  css:
+    theme:
+      css/helloworld.toolbar.css: {}
+
+# Подключаем библиотеку VexJS.
+vexjs:
+  remote: https://github.com/HubSpot/vex
+  version: 2.3.2
+  license:
+    name: MIT
+    url: https://github.com/HubSpot/vex/blob/master/LICENSE
+    gpl-compatible: true
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/vex-js/2.3.3/css/vex.css: { type: external, minified: false }
+      https://cdnjs.cloudflare.com/ajax/libs/vex-js/2.3.3/css/vex-theme-default.css: { type: external, minified: false}
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/vex-js/2.3.3/js/vex.combined.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
+# Например подключим Angular.js
+# Название библиотеки.
+angularjs:
+  # Ссылка на репозиторий/официальный сайт.
+  remote: https://github.com/angular/angular.js
+  # Версия подключаемой библиотеки. В данном случае надо указывать
+  # ту версию, которую вы подключаете.
+  version: 1.4.2
+  # Раздел с информацией о лицензии данной библиотеки.
+  license:
+    # Название лицензии.
+    name: MIT
+    # Ссылка на файл лицензии. Если отсутствует, что вряд ли, то
+    # указываем ссылку на официальный сайт лицензии где она
+    # и прописана.
+    url: https://github.com/angular/angular.js/blob/master/LICENSE
+    # Нужно указать true/false. Указывает, совместима ли лицензия с
+    # GPL лицензией Drupal.
+    # Узнать можно тут: http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses
+    gpl-compatible: true
+  # Подключаем js.
+  js:
+    # Прямая ссылка на файл. В {} указываются дополнительные данные. В данном случае
+    # что это внешняя библиотека и она сжатая.
+    https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js: { type: external, minified: true }

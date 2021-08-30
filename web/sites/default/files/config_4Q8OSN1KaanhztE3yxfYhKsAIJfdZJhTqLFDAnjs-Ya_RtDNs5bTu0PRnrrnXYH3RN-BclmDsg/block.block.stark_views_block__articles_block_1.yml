@@ -1,0 +1,32 @@
+uuid: eca02792-cc1d-4186-b0c4-98e53e3fd491
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - ctools
+    - views
+  theme:
+    - stark
+id: stark_views_block__articles_block_1
+theme: stark
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'views_block:articles-block_1'
+settings:
+  id: 'views_block:articles-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

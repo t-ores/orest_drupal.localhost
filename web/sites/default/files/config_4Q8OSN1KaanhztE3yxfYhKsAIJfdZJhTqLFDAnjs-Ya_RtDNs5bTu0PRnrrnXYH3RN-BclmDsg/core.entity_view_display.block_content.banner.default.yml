@@ -1,0 +1,34 @@
+uuid: 476431c0-f2c4-4ae8-98ae-d7f58c0a6f74
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_banner
+  module:
+    - image
+    - text
+id: block_content.banner.default
+targetEntityType: block_content
+bundle: banner
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true
