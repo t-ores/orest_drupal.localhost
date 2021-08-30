@@ -21,6 +21,7 @@
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
+        "drupal/devel_kint_extras": "^1.0",
         "drupal/ds": "^3.13",
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^5.0",
