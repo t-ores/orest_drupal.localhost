@@ -41,7 +41,7 @@ process:
       source:
         - field_image
         - 'constants/destination'
-      rename: true
+      file_exists: rename
     -
       plugin: skip_on_empty
       method: row

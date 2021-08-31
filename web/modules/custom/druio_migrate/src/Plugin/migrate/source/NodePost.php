@@ -2,6 +2,7 @@
 
 namespace Drupal\druio_migrate\Plugin\migrate\source;
 
+use Drupal\migrate\Annotation\MigrateSource;
 use Drupal\migrate\Plugin\migrate\source\SqlBase;
 use Drupal\migrate\Row;
 
