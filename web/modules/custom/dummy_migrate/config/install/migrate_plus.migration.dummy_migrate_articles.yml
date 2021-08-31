@@ -65,4 +65,4 @@ dependencies:
   enforced:
     module:
       - dummy_migrate
-      - migrate_source_csv
+#      - migrate_source_csv
