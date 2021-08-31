@@ -1,6 +1,6 @@
 # Очень важно чтобы данный id совпадал с последней частью в названии файла.
 id: dummy_migrate
-label: Dummy Articles
+label: Dummy Migrate Articles
 description: Some Migration examples for article.
 source_type: CSV
 dependencies:

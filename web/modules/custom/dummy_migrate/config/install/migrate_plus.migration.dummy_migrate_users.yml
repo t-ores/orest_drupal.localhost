@@ -12,25 +12,38 @@ migration_tags:
 # Описываем источник данных.
 source:
   # Тип плагина при помощи которого получаются данные.
-  plugin: csv
+  plugin: dummy_migrate
+  module: dummy_migrate
   # Его настройки.
-  path: modules/custom/dummy_migrate/assets/users.csv
+  path: assets/users.csv
   delimiter: ';'
   enclosure: '"'
   # Так как первая строка используется для заголовков в файле, мы должны её
   # пропускать, чтобы они не ушли на импорт.
   header_row_count: 1
-  column_names:
+#  column_names:
+#    0:
+#      uid: 'User ID'
+#    1:
+#      name: 'User name'
+#    2:
+#      email: 'User email'
+  columns:
     0:
-      uid: 'User ID'
+      key: uid
+      label: 'User ID'
     1:
-      name: 'User name'
+      key: name
+      label: 'User name'
     2:
-      email: 'User email'
+      key: email
+      label: 'User email'
+
   # Ключи данного источника. Данный плагин требует указание ключей в виде
   # массива, так что даже единственный ключ должен объявляться как массив.
-  keys:
-    - uid
+#  keys:
+#    - uid
+  key: uid
   # Ниже константы для данной миграции. Это уже особенность миграций, а не
   # конкретного плагина и работает со всеми.
   constants:

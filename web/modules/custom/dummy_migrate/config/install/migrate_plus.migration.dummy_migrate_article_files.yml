@@ -5,24 +5,29 @@ migration_tags:
   - file
   - article
 source:
-  plugin: csv
-  path: modules/custom/dummy_migrate/assets/articles.csv
+  plugin: dummy_migrate
+  module: dummy_migrate
+  path: assets/articles.csv
   delimiter: ';'
   enclosure: '"'
   header_row_count: 1
-  column_names:
+  columns:
     0:
-      id: 'Article ID'
+      key: id
+      label: 'Article ID'
     1:
-      title: 'Title'
+      key: title
+      label: 'Title'
     2:
-      image_url: 'Promo image URL'
+      key: field_image
+      label: 'Promo image URL'
     3:
-      uid: 'Author ID'
+      key: uid
+      label: 'Author ID'
     4:
-      body: 'Content'
-  keys:
-    - id
+      key: body
+      label: 'Content'
+  key: id
   constants:
     status: 1
     uid: 1
@@ -34,7 +39,7 @@ process:
       # не заморачиваться и не добавлять для этого плагинов и новых данных.
       plugin: download
       source:
-        - image_url
+        - field_image
         - 'constants/destination'
       rename: true
     -

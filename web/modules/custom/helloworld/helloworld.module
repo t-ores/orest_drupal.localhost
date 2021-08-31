@@ -139,6 +139,8 @@ function helloworld_entity_view(array &$build, \Drupal\Core\Entity\EntityInterfa
       ])
     ];
 
+    kint($json_ld);
+
     $build['#attached']['html_head'][] = [$json_ld, 'json-ld'];
   }
 }

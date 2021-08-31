@@ -20,37 +20,37 @@ services:
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
     #      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S opensmtpd:25
-      DB_HOST: $DB_HOST
+#      DB_HOST: $DB_HOST
     #      DB_PORT: $DB_PORT
-      DB_USER: $DB_USER
-      DB_PASSWORD: $DB_PASSWORD
-      DB_NAME: $DB_NAME
-      DB_DRIVER: $DB_DRIVER
+#      DB_USER: $DB_USER
+#      DB_PASSWORD: $DB_PASSWORD
+#      DB_NAME: $DB_NAME
+#      DB_DRIVER: $DB_DRIVER
     #      PHP_FPM_USER: wodby
     #      PHP_FPM_GROUP: wodby
     #      COLUMNS: 80 # Set 80 columns for docker exec -it.
     #      # Read instructions at https://wodby.com/docs/stacks/php/local/#xdebug
-      PHP_XDEBUG: 1
-      PHP_XDEBUG_DEFAULT_ENABLE: 1
-      PHP_XDEBUG_MODE: debug
-      PHP_XDEBUG_START_WITH_REQUEST: "yes"
-      PHP_XDEBUG_DISCOVER_CLIENT_HOST: 1
-      PHP_XDEBUG_PROFILER_ENABLE: 1
-      PHP_XDEBUG_EXTENDED_INFO: 1
-      PHP_XDEBUG_SCREAM: 1
-      PHP_XDEBUG_FORCE_DISPLAY_ERRORS: 1
+#      PHP_XDEBUG: 1
+#      PHP_XDEBUG_DEFAULT_ENABLE: 1
+#      PHP_XDEBUG_MODE: debug
+#      PHP_XDEBUG_START_WITH_REQUEST: "yes"
+#      PHP_XDEBUG_DISCOVER_CLIENT_HOST: 1
+#      PHP_XDEBUG_PROFILER_ENABLE: 1
+#      PHP_XDEBUG_EXTENDED_INFO: 1
+#      PHP_XDEBUG_SCREAM: 1
+#      PHP_XDEBUG_FORCE_DISPLAY_ERRORS: 1
 #      PHP_XDEBUG_REMOTE_CONNECT_BACK: 0
 #      PHP_XDEBUG_REMOTE_AUTOSTART: 1
 #      XDEBUG_CONFIG: remote_host=172.17.0.1
     #      PHP_IDE_CONFIG: serverName=my-ide
-      PHP_XDEBUG_IDEKEY: "PHPSTORM"
+#      PHP_XDEBUG_IDEKEY: "PHPSTORM"
 #      PHP_XDEBUG_CLIENT_HOST: 172.17.0.1 # Linux
-      PHP_XDEBUG_CLIENT_HOST: 172.18.0.1
-      PHP_XDEBUG_CLIENT_PORT: 9003
+#      PHP_XDEBUG_CLIENT_HOST: 172.18.0.1
+#      PHP_XDEBUG_CLIENT_PORT: 9003
     #      PHP_XDEBUG_CLIENT_HOST: host.docker.internal # Docker 18.03+ Mac/Win
     #      PHP_XDEBUG_CLIENT_HOST: 10.0.75.1 # Windows, Docker < 18.03
     #      PHP_XDEBUG_LOG: /tmp/php-xdebug.log
-      PHP_XDEBUG_LOG: /tmp/php-xdebug.log
+#      PHP_XDEBUG_LOG: /tmp/php-xdebug.log
 #      PHP_XDEBUG_REMOTE_LOG: /tmp/php-xdebug.log
     #      # PHPUnit Drupal testing configurations
     #      SIMPLETEST_BASE_URL: "http://nginx"

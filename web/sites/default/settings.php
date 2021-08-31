@@ -820,4 +820,16 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
+// Вторая БД где хранится дамп dru.io из Drupal 7. Не подключается к удаленной БД для
+// безопасности и скорости работы.
+$databases['druio_old']['default'] = array (
+  'database' => 'druio_old',
+  'username' => 't-ores',
+  'password' => 'Mysql_123',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
 $settings['config_sync_directory'] = 'sites/default/files/config_4Q8OSN1KaanhztE3yxfYhKsAIJfdZJhTqLFDAnjs-Ya_RtDNs5bTu0PRnrrnXYH3RN-BclmDsg';

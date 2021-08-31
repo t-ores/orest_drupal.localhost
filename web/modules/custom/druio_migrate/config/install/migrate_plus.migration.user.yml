@@ -1,0 +1,30 @@
+id: druio_user
+label: User migration
+migration_group: druio
+source:
+  plugin: druio_user
+destination:
+  plugin: entity:user
+process:
+  pass: password
+  mail: email
+  init: email
+  status: status
+  roles:
+    plugin: default_value
+    default_value: 2
+  name:
+    plugin: make_unique_entity_field
+    entity_type: user
+    field: name
+    source: name
+  created: created
+  changed: '@created'
+  access: access
+  login: login
+dependencies:
+  enforced:
+    module:
+      - druio_migrate
+migration_tags:
+  - Content

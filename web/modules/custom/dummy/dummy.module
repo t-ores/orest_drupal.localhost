@@ -134,7 +134,7 @@ function template_preprocess_dummy_node_list(&$variables) {
     ->execute();
   $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
 
-  var_dump($nids);
+  //var_dump($nids);
 
   foreach ($nodes as $node) {
     $variables['nodes'][] = [
@@ -146,10 +146,3 @@ function template_preprocess_dummy_node_list(&$variables) {
   // Random order.
   shuffle($variables['nodes']);
 }
-//function dummy_page_alter(&$page) {
-//  // Add help text to the user login block.
-//  $page['content'] = array(
-//    '#weight' => 1,
-//    '#markup' => t('OREST'),
-//  );
-//}

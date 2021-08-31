@@ -10,7 +10,7 @@ use Drupal\migrate\Plugin\migrate\source\SourcePluginBase;
  * Use csv file data as source.
  *
  * @MigrateSource(
- *   id = "dummy_migrate_csv"
+ *   id = "dummy_migrate"
  * )
  */
 class CSV extends SourcePluginBase {
@@ -63,6 +63,9 @@ class CSV extends SourcePluginBase {
   public function __construct(array $configuration, $plugin_id, $plugin_definition, \Drupal\migrate\Plugin\MigrationInterface $migration) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $migration);
 
+    //$this->configuration['module'] = '';
+    //kint($this->configuration);
+
     if (empty($this->configuration['path']) || empty($this->configuration['module'])) {
       throw new MigrateException('The path or module is not set.');
     }
@@ -82,6 +85,8 @@ class CSV extends SourcePluginBase {
     else {
       $this->columns = $this->configuration['columns'];
     }
+
+    //kint($this->configuration);
 
     if (empty($this->configuration['key'])) {
       throw new MigrateException('The key is must be set.');

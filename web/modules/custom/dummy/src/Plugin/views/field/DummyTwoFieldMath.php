@@ -47,24 +47,27 @@ class DummyTwoFieldMath extends FieldPluginBase {
    */
   public function buildOptionsForm(&$form, FormStateInterface $form_state) {
     $field_options = $this->getFieldOptions();
+
+    //kint($field_options);
+
     $form['first_field'] = [
       '#type' => 'select',
       '#title' => $this->t('First field'),
-      '#required' => TRUE,
+      '#required' => FALSE,
       '#options' => $field_options,
       '#default_value' => $this->options['first_field'],
     ];
     $form['second_field'] = [
       '#type' => 'select',
       '#title' => $this->t('Second field'),
-      '#required' => TRUE,
+      '#required' => FALSE,
       '#options' => $field_options,
       '#default_value' => $this->options['second_field'],
     ];
     $form['math_operation'] = [
       '#type' => 'select',
       '#title' => $this->t('Math operation'),
-      '#required' => TRUE,
+      '#required' => FALSE,
       '#options' => [
         '+' => '+',
         '-' => '-',
